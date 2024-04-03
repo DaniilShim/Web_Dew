@@ -10,6 +10,7 @@ import { AlbumsService } from '../albums.service';
 export class AlbumsComponent {
   albums!: Album[];
 
+
   constructor(private albumService: AlbumsService){}
 
   ngOnInit(){
@@ -21,4 +22,6 @@ export class AlbumsComponent {
   deleteAlbum(id: number){
     this.albums = this.albums.filter(a => a.id !== id)
   }
+
+
 }
